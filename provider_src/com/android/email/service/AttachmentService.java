@@ -847,6 +847,7 @@ public class AttachmentService extends Service implements Runnable {
             final Attachment attachment = Attachment.restoreAttachmentWithId(this, id);
             if (attachment == null) {
                 LogUtils.w(LOG_TAG, "Could not restore attachment #%d", id);
+	        change = sAttachmentChangedQueue.poll();
                 continue;
             }
             attachment.mFlags = (int) flags;
