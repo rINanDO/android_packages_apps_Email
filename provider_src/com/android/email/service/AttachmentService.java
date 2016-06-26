@@ -66,7 +66,7 @@ public class AttachmentService extends Service implements Runnable {
     public static final String LOG_TAG = "AttachmentService";
 
     // STOPSHIP Set this to 0 before shipping.
-    private static final int ENABLE_ATTACHMENT_SERVICE_DEBUG = 0;
+    private static final int ENABLE_ATTACHMENT_SERVICE_DEBUG = 1;
 
     // Minimum wait time before retrying a download that failed due to connection error
     private static final long CONNECTION_ERROR_RETRY_MILLIS = 10 * DateUtils.SECOND_IN_MILLIS;
